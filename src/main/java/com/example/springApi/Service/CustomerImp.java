@@ -19,5 +19,11 @@ private CustomerRepository customerRepo;
        
         return customerRepo.findAll();
     }
+
+    @Override
+    public Customer saveCustomer(Customer customer) {
+    return customerRepo.save(customer);
+    }
+    
     
 }

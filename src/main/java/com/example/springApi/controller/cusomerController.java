@@ -36,9 +36,10 @@ public String getCustomer(@PathVariable Long id){
 }
 
 @PostMapping("/customers")
-public String saveCustomer(@RequestBody Customer customer ){
+public Customer saveCustomer(@RequestBody Customer customer ){
 
-    return "Saving customer " + customer;
+    return cService.saveCustomer(customer);
+    
 }
 
 @DeleteMapping("/customers")

@@ -7,4 +7,6 @@ import com.example.springApi.Model.Customer;
 public interface customerService {
     
     List<Customer> getCustomers();
+
+    Customer saveCustomer (Customer customer);
 }
