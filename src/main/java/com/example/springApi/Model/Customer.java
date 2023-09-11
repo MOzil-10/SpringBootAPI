@@ -1,12 +1,11 @@
 package com.example.springApi.Model;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,29 +13,27 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-@Entity  
-@Table(name="customers")
-
-
+@Entity
+@Table(name = "customers")
 public class Customer {
-    
-     @Id
-     @GeneratedValue(strategy = GenerationType.AUTO)
-     @Column(name="id")
-    private int id;
 
-    @Column(name="name")
-    private String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
+  private Integer id;
 
-      @Column(name="email")
-    private String email;
+  @Column(name = "name")
+  private String name;
 
-      @Column(name="username")
-    private String username;
+  @Column(name = "email")
+  private String email;
 
-      @Column(name="password")
-    private String password;
+  @Column(name = "username")
+  private String username;
 
-      @Column(name="confirmPassword")
-    private String confirmPassword;
+  @Column(name = "password")
+  private String password;
+
+  @Column(name = "confirmPassword")
+  private String confirmPassword;
 }

@@ -11,18 +11,22 @@ import com.example.springApi.Repository.CustomerRepository;
 @Service
 public class CustomerImp implements customerService {
 
-    @Autowired
-private CustomerRepository customerRepo;
+private final CustomerRepository customerRepository;
+
+@Autowired
+public CustomerImp(CustomerRepository customerRepository) {
+    this.customerRepository = customerRepository;
+}
 
     @Override
     public List<Customer> getCustomers() {
        
-        return customerRepo.findAll();
+        return customerRepository.findAll();
     }
 
     @Override
     public Customer saveCustomer(Customer customer) {
-    return customerRepo.save(customer);
+    return customerRepository.save(customer);
     }
     
     
